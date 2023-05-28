@@ -10,8 +10,9 @@
   </header>
   
   <main id="search-container">
-    <form id="search-form" action="#" method="GET">
-      <input type="text" id="search-input" name="query" placeholder="Ticker or Company Name (i.e. AAPL or Apple, etc)" />
+    <form autocomplete="off" id="search-form" action="#" method="GET">
+      <input type="text" id="search-input"  placeholder="Ticker or Company Name (i.e. AAPL or Apple, etc)" list="companies" />
+      <datalist id="companies"></datalist>
       <button type="submit">Search</button>
     </form>
   </main>
@@ -19,6 +20,7 @@
   <footer>
     A Will Storrs Production
   </footer>
+
   <script src="app.js"></script>
 </body>
 </html>
