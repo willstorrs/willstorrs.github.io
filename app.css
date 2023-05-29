@@ -37,26 +37,16 @@ header h1 {
 }
 
 #search-elements {
-  position: relative;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
-  padding-bottom: 10px;
-  background-color: #f0f8ff;
 }
 
 #search-input {
-  position: absolute;
-  width: 100%;
-  z-index: 1;
-  background-color: #ffffff;
-  border: 2px solid #66b3ff;
+  flex: 4;
   padding: 10px;
-  font-family: 'Arial', sans-serif;
-  font-size: 16px;
-  color: #000000;
-  outline: none;
-  placeholder: "Ticker or Company Name (i.e. AAPL or Apple, etc)";
+  border: 2px solid #66b3ff;
+  border-radius: 5px 0px 0px 5px; /* Top left and bottom left rounded, top right and bottom right square */
 }
 
 #search-form button {
@@ -73,6 +63,12 @@ header h1 {
   background-color: #80ccff;
 }
 
+#company-link {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
 footer {
   position: absolute;
   bottom: 0;
@@ -80,4 +76,47 @@ footer {
   padding: 10px;
   font-size: 0.7em;
   color: #808080;
+}
+
+#company-page {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+#company-nav {
+  flex: 1;
+  margin-right: 20px;
+}
+
+#company-nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#company-nav li {
+  background-color: #66b3ff;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#company-content {
+  flex: 4;
+}
+
+#company-content article {
+  background-color: #f0f8ff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 2px solid #66b3ff;
+}
+
+#home-link {
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
