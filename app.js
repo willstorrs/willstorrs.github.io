@@ -1,18 +1,24 @@
-fetch('companies.json')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error("HTTP error " + response.status);
-    }
-    return response.json();
-  })
-  .then(data => {
-    const dataList = document.getElementById('companies');
-    data.forEach(item => {
-      const option = document.createElement('option');
-      option.value = item.company + " (" + item.ticker + ")";
-      dataList.appendChild(option);
-    });
-  })
-  .catch(function(error) {
-    console.log(error);
-  });
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Company Information</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header>
+    <h1 id="company-name"></h1>
+  </header>
+  
+  <main id="company-info">
+    <!-- Company information will be inserted here -->
+  </main>
+  
+  <footer>
+    A Will Storrs Production
+  </footer>
+  
+  <a href="index.html" id="home-link">Back to Home</a>
+
+  <script src="company.js"></script>
+</body>
+</html>
