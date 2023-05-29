@@ -11,9 +11,11 @@
   
   <main id="search-container">
     <form autocomplete="off" id="search-form" action="#" method="GET">
-      <input type="text" id="search-input"  placeholder="Ticker or Company Name (i.e. AAPL or Apple, etc)" list="companies" />
-      <datalist id="companies"></datalist>
-      <button type="submit">Search</button>
+      <div id="search-elements">
+        <input type="text" id="search-input"  placeholder="Ticker or Company Name (i.e. AAPL or Apple, etc)" list="companies" />
+        <datalist id="companies"></datalist>
+        <button type="submit">Search</button>
+      </div>
     </form>
   </main>
   
